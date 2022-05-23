@@ -1,0 +1,71 @@
+# STO 12x12x12 converge
+
+name iSTO.in 
+
+nqpt 8
+
+qpts
+ 0.0 0.0 0.0
+ 0.0 0.0 0.005
+ 0.0 0.0 0.01
+ 0.0 0.0 0.015
+ 0.0 0.0 0.02
+ 0.0 0.0 0.025
+ 0.0 0.0 0.03
+ 0.0 0.0 0.04  
+
+rfatpol 1 5
+
+rfdir 0 0 1
+
+split 3 5 #qpoints and atoms 
+
+#Common input variables################################################
+
+#Definition of the k-point grids
+kptopt 3          # No symmetry, to be safe
+
+nshiftk 1
+shiftk  0.5 0.5 0.5  # These shifts will be the same for all grids
+        0.5 0.0 0.0
+        0.0 0.5 0.0
+        0.0 0.0 0.5
+
+ ngkpt 12 12 12
+
+ istwfk 1728*1
+
+#Definition of the unit cell
+acell 3*7.2675           # This is equivalent to   10.18 10.18 10.18
+rprim  1.0  0.0  0.0   # FCC primitive vectors (to be scaled by acell)
+       0.0  1.0  0.0
+       0.0  0.0  1.0
+
+#Definition of the atom types
+ntypat 3          # Three types of atoms
+znucl 38 22 8     # Sr, Ti, O
+
+#Definition of the atoms
+natom 5           # There are five atoms
+typat 1 2 3 3 3   # Sr Ti O3
+xred              # This keyword indicate that the location of the atoms
+                  # will follow, one triplet of number for each atom
+   0.0  0.0  0.0  # Sr
+   0.5  0.5  0.5  # Ti
+   0.5  0.5  0.0  # O
+   0.5  0.0  0.5  # O
+   0.0  0.5  0.5  # O
+
+#Definition of the planewave basis set
+ecut 80         # Maximal kinetic energy cut-off, in Hartree
+
+#Definition of the SCF procedure
+nstep 50          # Maximal number of SCF cycles
+ixc 7            # PBE, from the psp
+
+nband 20
+
+# add to conserve old < 6.7.2 behavior for calculating forces at each SCF step
+ optforces 1
+
+diemac 13
