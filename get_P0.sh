@@ -2,7 +2,7 @@
 
 # Get the zero-displacement BECs
 cd P0
-dist_col_2.sh
+dist_col_ab7.sh
 cd q1_at1
 
 # Get cartesian coordinates

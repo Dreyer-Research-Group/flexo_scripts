@@ -22,13 +22,13 @@ for fol in at_*; do
 	# get derivatives_piezo.dat
 	cd P1 # $homedir/at_i_dir_j/m_0.001/P1
 	echo "Running dist_col and flexo_derivatives in " `pwd`
-	dist_col_2.sh     
+	dist_col_ab7.sh     
 	#flexo_derivatives.x
 	onlyeBohr_flexo_deriv.x
 
 	cd ../P2 # $homedir/at_i_dir_j/m_0.001/P2
 	echo "Running dist_col and flexo_derivatives in " `pwd`
-	dist_col_2.sh
+	dist_col_ab7.sh
 	echo "Gathered totg0s"
 	#flexo_derivatives.x
 	onlyeBohr_flexo_deriv.x

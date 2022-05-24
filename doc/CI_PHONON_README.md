@@ -84,7 +84,7 @@ pseudos "B_LDA_noNLCC.psp8, N_LDA_noNLCC.psp8"
 
 ## Collect the results
 
-- Once the calculations have finished, go to the home folder (i.e., the one where you originally ran `flexo_abin_gen_ab9.sh` to get the `q*_at*` folders). Run the script `dist_col_3.sh` which is available here: https://github.com/Dreyer-Research-Group/flexo_scripts . This will generate a file called `totg_col.dat` containing all of the information about the flexo coefficients from your `q*_at*` folders. It will also create a file called `sum_totg_col.dat` which is sumed over atoms.
+- Once the calculations have finished, go to the home folder (i.e., the one where you originally ran `flexo_abin_gen_ab9.sh` to get the `q*_at*` folders). Run the script `dist_col_ab9.sh` which is available here: https://github.com/Dreyer-Research-Group/flexo_scripts . This will generate a file called `totg_col.dat` containing all of the information about the flexo coefficients from your `q*_at*` folders. It will also create a file called `sum_totg_col.dat` which is sumed over atoms.
 
 ## Take the q derivatives for CI flexo and piezo coefficients
 
