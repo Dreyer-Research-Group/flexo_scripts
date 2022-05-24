@@ -186,7 +186,7 @@ while [ $countq -le $splitq ]; do
 		count=$qstart
 		while [ $count -le $qfin ]; do
 		    echo "qpt"$setnum"  "${qpt[$count]} >> $name
-		    echo "rfuser"$setnum"  2" >> $name
+		    echo "rfuser"$setnum"  1" >> $name
 
 		    if [[ $nqzero -ne $count ]]; then
 			wfq=$(( $setnum-$qnum ))
